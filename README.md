@@ -1,0 +1,1 @@
+# payingguest-service-registry-service
