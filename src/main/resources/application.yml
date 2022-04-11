@@ -1,0 +1,28 @@
+#Server Settings
+server:
+  port: 8761
+
+#Eureka Service Discovery Settings
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    instance:
+      preferIpAddress: true
+    register-with-eureka: false
+    fetch-registry: false
+
+spring:
+  # Application Name
+  application:
+    name: registry-service
+  #ignore null fields in json
+  jackson:
+    default-property-inclusion: NON_NULL
+
+logging:
+  level:
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF
